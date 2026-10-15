@@ -1,0 +1,81 @@
+// ==============================================================================
+// 03_DAX_Measures_Library / 01_base_measures.dax
+// Kennzahlentabelle: _Kennzahlen
+// Modell: fct_bestellungen + dim_datum / dim_produkte / dim_kunden / dim_vertrieb
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// 1. Realisierter Nettoumsatz (nur zugestellte Positionen)
+//    Gesamt: 363.823.132,90 €
+// ------------------------------------------------------------------------------
+Umsatz =
+CALCULATE(
+    SUM(fct_bestellungen[Nettoumsatz]),
+    fct_bestellungen[IstUmsatzrelevant] = 1
+)
+
+// ------------------------------------------------------------------------------
+// 2. Bruttoumsatz inkl. Storno / Retoure / In Zustellung (nur zur Kontrolle)
+//    Gesamt: 390.285.124,97 €
+// ------------------------------------------------------------------------------
+Umsatz Brutto alle Status =
+SUM(fct_bestellungen[Nettoumsatz])
+
+// ------------------------------------------------------------------------------
+// 3. Nicht realisierter Umsatz (Storno + Retoure + In Zustellung)
+//    Gesamt: 26.461.992,07 €
+// ------------------------------------------------------------------------------
+Umsatz nicht realisiert =
+[Umsatz Brutto alle Status] - [Umsatz]
+
+// ------------------------------------------------------------------------------
+// 4. Deckungsbeitrag (Rohertrag)
+//    Gesamt: 123.596.045,90 €
+// ------------------------------------------------------------------------------
+Deckungsbeitrag =
+CALCULATE(
+    SUM(fct_bestellungen[Deckungsbeitrag]),
+    fct_bestellungen[IstUmsatzrelevant] = 1
+)
+
+// ------------------------------------------------------------------------------
+// 5. Marge in % (Format: Prozent, 1 Dezimalstelle)  ->  33,97 %
+// ------------------------------------------------------------------------------
+Marge % =
+DIVIDE([Deckungsbeitrag], [Umsatz], 0)
+
+// ------------------------------------------------------------------------------
+// 6. Anzahl Aufträge (ALLE Status)  ->  40.000
+// ------------------------------------------------------------------------------
+Bestellungen =
+DISTINCTCOUNT(fct_bestellungen[BestellID])
+
+// ------------------------------------------------------------------------------
+// 7. Anzahl realisierter Aufträge (nur zugestellt)  ->  37.067
+//    Konsistenter Nenner für den Bestellwert (gleicher Filter wie [Umsatz])
+// ------------------------------------------------------------------------------
+Bestellungen realisiert =
+CALCULATE(
+    DISTINCTCOUNT(fct_bestellungen[BestellID]),
+    fct_bestellungen[IstUmsatzrelevant] = 1
+)
+
+// ------------------------------------------------------------------------------
+// 8. Durchschnittlicher Bestellwert (Version im Dashboard)
+//    Umsatz (realisiert) / Aufträge (alle)  ->  ~9.096 €
+// ------------------------------------------------------------------------------
+Durchschnittlicher Bestellwert =
+DIVIDE([Umsatz], [Bestellungen], 0)
+
+// ------------------------------------------------------------------------------
+// 9. Durchschnittlicher Bestellwert (fachlich sauber, empfohlen)
+//    Umsatz (realisiert) / Aufträge (realisiert)  ->  ~9.815 €
+// ------------------------------------------------------------------------------
+Durchschnittlicher Bestellwert realisiert =
+DIVIDE([Umsatz], [Bestellungen realisiert], 0)
+
+// ------------------------------------------------------------------------------
+// 10. Storno- / Retourenquote (Anteil nicht realisierter Umsatz)  ->  6,8 %
+// ------------------------------------------------------------------------------
+Quote nicht realisiert % =
+DIVIDE([Umsatz nicht realisiert], [Umsatz Brutto alle Status], 0)

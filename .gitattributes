@@ -1,0 +1,4 @@
+# GitHub Linguist Overrides
+*.dax linguist-language=DAX
+*.sql linguist-language=TSQL
+*.csv linguist-detectable=false

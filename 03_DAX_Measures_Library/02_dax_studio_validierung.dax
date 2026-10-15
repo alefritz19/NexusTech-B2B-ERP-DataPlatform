@@ -1,0 +1,55 @@
+// ==============================================================================
+// 03_DAX_Measures_Library / 02_dax_studio_validierung.dax
+// Abfragen für DAX Studio (Externe Tools -> DAX Studio, F5 = Run)
+// Ziel: Ergebnisse 1:1 gegen SQL Server abgleichen (Reconciliation)
+// ==============================================================================
+
+// ------------------------------------------------------------------------------
+// Abfrage 1: Gesamtsumme (Abgleich mit SQL)
+// Ergebnis: 390.285.124,97 | 363.823.132,90 | 40.000 | 120.000
+// ------------------------------------------------------------------------------
+EVALUATE
+ROW(
+    "Umsatz_Brutto", SUM(fct_bestellungen[Nettoumsatz]),
+    "Umsatz_Reell",  CALCULATE(
+                        SUM(fct_bestellungen[Nettoumsatz]),
+                        fct_bestellungen[IstUmsatzrelevant] = 1
+                     ),
+    "Auftraege_Anzahl",  DISTINCTCOUNT(fct_bestellungen[BestellID]),
+    "Positionen_Anzahl", COUNTROWS(fct_bestellungen)
+)
+
+// ------------------------------------------------------------------------------
+// Abfrage 2: Umsatz & Marge je Kategorie (Spalte aus Dimension, Summe aus Fakt)
+// ------------------------------------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS(
+    dim_produkte[KategorieName],
+    "Reeller_Umsatz",
+        CALCULATE(SUM(fct_bestellungen[Nettoumsatz]), fct_bestellungen[IstUmsatzrelevant] = 1),
+    "Deckungsbeitrag",
+        CALCULATE(SUM(fct_bestellungen[Deckungsbeitrag]), fct_bestellungen[IstUmsatzrelevant] = 1),
+    "Marge_Prozent",
+        DIVIDE(
+            CALCULATE(SUM(fct_bestellungen[Deckungsbeitrag]), fct_bestellungen[IstUmsatzrelevant] = 1),
+            CALCULATE(SUM(fct_bestellungen[Nettoumsatz]),     fct_bestellungen[IstUmsatzrelevant] = 1)
+        ) * 100
+)
+ORDER BY [Reeller_Umsatz] DESC
+
+// ------------------------------------------------------------------------------
+// Abfrage 3: Jahresübersicht mit fertigen Measures (nach "Refresh Metadata")
+// Ergebnis:
+//   2023 | 122.884.040,36 | 41.744.870,36 | 33,97 % | 13.504 | 9.099,83
+//   2024 | 121.594.462,48 | 41.309.327,48 | 33,97 % | 13.392 | 9.079,63
+//   2025 | 119.344.630,06 | 40.541.848,06 | 33,97 % | 13.104 | 9.107,50
+// ------------------------------------------------------------------------------
+EVALUATE
+SUMMARIZECOLUMNS(
+    dim_datum[Jahr],
+    "Umsatz", [Umsatz],
+    "Marge", [Deckungsbeitrag],
+    "Marge %", [Marge %],
+    "Auftraege", [Bestellungen],
+    "Durchschnitt_Bestellwert", [Durchschnittlicher Bestellwert]
+)
