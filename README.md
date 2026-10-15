@@ -12,6 +12,8 @@ Ein realistisches End-to-End Enterprise Data Pipeline & Business Intelligence Pr
 
 ## 📊 Executive Dashboard Preview
 
+![NexusTech B2B Analytics Executive Dashboard](images/01_dashboard_dark_theme.png)
+
 * **Gesamtumsatz (Realisiert):** **363,82 Mio. €** (bereinigt um Stornierungen & Retouren)
 * **Deckungsbeitrag (Rohertrag):** **123,60 Mio. €**
 * **Bruttomarge:** **33,97 %**
@@ -65,29 +67,59 @@ flowchart TD
 
 ---
 
-## 🧠 Kernkompetenzen & Data Engineering Best Practices
+## 🏛️ 1. OLTP Quellsystem (3. Normalform)
 
-### 1. Trennung von Transaktion (OLTP) und Analyse (OLAP / DWH)
-* In der operativen ERP-Datenbank sind Aufträge in **Kopfdaten** (`Bestellungen`) und **Positionsdaten** (`Bestellpositionen`) getrennt, um Redundanzen zu vermeiden (3. Normalform).
-* Für das DWH wurden beide Tabellen mit der Logistik (`Lieferungen`) und den Einkaufspreisen (`Produkte`) verheiratet. Das **Grain (Körnigkeit)** des Fakts ist exakt **1 verkaufte Auftragsposition**.
+Das relationale ERP-System trennt Transaktionsdaten in Kopf- (`Bestellungen`), Positions- (`Bestellpositionen`) und Logistikdaten (`Lieferungen`):
 
-### 2. Business-Logik & Kennzahlen-Reconciliation
-* **Berechnung auf Fact-Ebene:**
-  $$\text{Nettoumsatz} = (\text{Menge} \times \text{Einzelpreis}) - \text{RabattBetrag}$$
-  $$\text{Gesamtkosten} = \text{Menge} \times \text{Einkaufspreis}$$
-  $$\text{Deckungsbeitrag} = \text{Nettoumsatz} - \text{Gesamtkosten}$$
-* **Präzision:** Verwendung von `CAST(... AS DECIMAL(18,2))` zur Vermeidung von Gleitkomma-Rundungsfehlern (Floating-Point Drift).
-* **Status-Falle & Flagging:**
-  Stornierte Aufträge (`Storniert`) und Retouren (`Retoure`) wurden **nicht gelöscht**, sondern über ein Flag `IstUmsatzrelevant` (1/0) gesteuert.
-  > 💡 **Ergebnis:** Ohne Bereinigung betrug der Bruttoumsatz **390,28 Mio. €**. Das Flag filterte exakt **26,46 Mio. €** an Stornos und Retouren heraus und lieferte dem Management die reale Zahl von **363,82 Mio. €**.
+![SQL Server ERP ERD Diagramm](images/04_sql_server_oltp_erd.png)
 
-### 3. Sternschema (Kimball Star Schema)
-Das Modell in Power BI besteht aus:
-* **`fct_bestellungen`** (Zentrum, 120.000 Zeilen)
+---
+
+## ⭐ 2. Kimball Sternschema (Power BI Semantic Model)
+
+Um maximale Abfragegeschwindigkeit und intuitive Analysierbarkeit zu gewährleisten, wurden die normalisierten Tabellen über T-SQL Views in ein **reines Sternschema (1:N)** überführt:
+
+![Power BI Sternschema Modellansicht](images/02_powerbi_star_schema.png)
+
+### Komponenten des Modells:
+* **`fct_bestellungen`** (Zentrum, 120.000 Zeilen, Granularität: 1 Auftragsposition)
 * **`dim_datum`** (1.096 Tage, 2023–2025, ISO-Kalenderwochen, Quartale)
 * **`dim_produkte`** (120 Produkte, denormalisiert mit Kategorie und Hersteller)
 * **`dim_kunden`** (2.500 B2B-Kunden mit Branche, Bonität, Zahlungsziel)
 * **`dim_vertrieb`** (12 Vertriebsmitarbeiter mit Zielumsatz und Region)
+
+---
+
+## ⚡ 3. Validierung in DAX Studio (VertiPaq Engine)
+
+Vor der Berichtserstellung wurden alle Core-Measures über DAX Studio direkt gegen die Tabular-Engine validiert:
+
+![DAX Studio Query Validierung](images/03_dax_studio_validation.png)
+
+```dax
+EVALUATE
+SUMMARIZECOLUMNS(
+    dim_datum[Jahr],
+    "Umsatz", [Umsatz],
+    "Marge", [Deckungsbeitrag],
+    "Marge %", [Marge %],
+    "Auftraege", [Bestellungen],
+    "Durchschnitt_Bestellwert", [Durchschnittlicher Bestellwert]
+)
+```
+
+---
+
+## 🧠 Business-Logik & Kennzahlen-Reconciliation
+
+* **Berechnung auf Fact-Ebene:**
+  $$\text{Nettoumsatz} = (\text{Menge} \times \text{Einzelpreis}) - \text{RabattBetrag}$$
+  $$\text{Gesamtkosten} = \text{Menge} \times \text{Einkaufspreis}$$
+  $$\text{Deckungsbeitrag} = \text{Nettoumsatz} - \text{Gesamtkosten}$$
+* **Präzision:** Verwendung von `CAST(... AS DECIMAL(18,2))` zur Vermeidung von Gleitkomma-Rundungsfehlern.
+* **Status-Falle & Flagging:**
+  Stornierte Aufträge (`Storniert`) und Retouren (`Retoure`) wurden **nicht gelöscht**, sondern über ein Flag `IstUmsatzrelevant` (1/0) gesteuert.
+  > 💡 **Ergebnis:** Ohne Bereinigung betrug der Bruttoumsatz **390,28 Mio. €**. Das Flag filterte exakt **26,46 Mio. €** an Stornos und Retouren heraus und lieferte dem Management die reale Zahl von **363,82 Mio. €**.
 
 ---
 
@@ -138,7 +170,12 @@ NexusTech_B2B_ERP_Project/
 │   ├── dim_kunden.csv
 │   ├── dim_vertrieb.csv
 │   └── dim_datum.csv
-├── NexusTech_B2B_Analytics.pbix             # Power BI Desktop Modell & Dashboard
+├── images/                                  # Screenshots für Dokumentation & Portfolio
+│   ├── 01_dashboard_dark_theme.png
+│   ├── 02_powerbi_star_schema.png
+│   ├── 03_dax_studio_validation.png
+│   └── 04_sql_server_oltp_erd.png
+├── NexusTech_B2B_Analytics_Query.dax        # DAX Studio Validierungs-Skripte
 └── README.md                                # Projektdokumentation
 ```
 
