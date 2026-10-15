@@ -1,0 +1,7 @@
+*.tmp
+~$*.xlsx
+~$*.docx
+.vs/
+.idea/
+Thumbs.db
+desktop.ini

@@ -1,0 +1,9 @@
+﻿EVALUATE
+SUMMARIZECOLUMNS(
+    dim_datum[Jahr],
+    "Umsatz", [Umsatz],
+    "Marge", [Deckungsbeitrag],
+    "Marge %", [Marge %],
+    "Auftraege", [Bestellungen],
+    "Durchschnitt_Bestellwert", [Durchschnittlicher Bestellwert]
+)

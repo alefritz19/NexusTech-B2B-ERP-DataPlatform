@@ -1,0 +1,13 @@
+﻿VertriebsID,MitarbeiterName,Vertriebsregion,Standort,Senioritaet,Zielumsatz_Jahr_EUR
+501,Maximilian Müller,Nord,Hamburg,Senior Account Manager,"850000,00"
+502,Sophie Schmidt,Nord,Hannover,Account Manager,"500000,00"
+503,Alexander Schneider,West,Köln,Senior Account Manager,"900000,00"
+504,Laura Fischer,West,Düsseldorf,Account Manager,"550000,00"
+505,Felix Weber,Süd,München,Senior Account Manager,"950000,00"
+506,Anna Meyer,Süd,Stuttgart,Account Manager,"600000,00"
+507,Lukas Wagner,Ost,Berlin,Senior Account Manager,"800000,00"
+508,Julia Becker,Ost,Leipzig,Account Manager,"500000,00"
+509,Niklas Schulz,Mitte,Frankfurt am Main,Senior Account Manager,"880000,00"
+510,Sarah Hoffmann,Mitte,Nürnberg,Account Manager,"520000,00"
+511,Jan Schäfer,DACH,Wien,Key Account Manager AT,"750000,00"
+512,Katharina Koch,DACH,Zürich,Key Account Manager CH,"980000,00"

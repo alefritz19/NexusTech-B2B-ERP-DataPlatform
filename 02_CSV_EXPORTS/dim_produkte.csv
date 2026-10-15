@@ -1,0 +1,121 @@
+﻿ProduktID,ProduktName,EAN,Einkaufspreis_EUR,Listenpreis_EUR,IstAktiv,KategorieName,Warenbereich,HerstellerName,Herkunftsland,Partnerschaftsstatus
+1001,EliteDesk Mini PC Core i7 32GB,4000100000037,"31,50","48,83",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1002,UltraSharp 27 Zoll 4K USB-C Monitor,4000100000074,"43,00","66,65",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1003,Ergonomischer 34 Zoll Curved UWQHD,4000100000111,"54,50","84,48",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1004,Thunderbolt 4 Universal Dockingstation,4000100000148,"66,00","102,30",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1005,Managed Gigabit Switch 24-Port PoE+,4000100000185,"77,50","120,13",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1006,Enterprise Core Switch 48-Port 10GbE,4000100000222,"89,00","137,95",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1007,WiFi-6 Dual-Band Access Point Pro,4000100000259,"100,50","155,78",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1008,VPN-Sicherheits-Gateway Firewall Appliance,4000100000296,"112,00","173,60",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1009,19 Zoll Serverschrank 42HE schallgedämmt,4000100000333,"123,50","191,43",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1010,PowerServer Rack 1HE 64GB ECC Dual-Xeon,4000100000370,"135,00","209,25",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1011,4-Bay Business NAS Storage System,4000100000407,"146,50","227,08",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1012,Server-SSD 1.92TB NVMe Read-Intensive,4000100000444,"158,00","244,90",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1013,Windows Server 2022 Standard 16-Core,4000100000481,"169,50","262,73",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1014,Endpoint Security Suite 10 Clients 1Y,4000100000518,"181,00","280,55",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1015,VM-Backup & Replikation Jahreslizenz,4000100000555,"192,50","298,38",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1016,Ergonomischer Bürodrehstuhl Pro-Mesh,4000100000592,"204,00","316,20",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1017,Elektrisch höhenverstellbarer Schreibtisch 160cm,4000100000629,"215,50","334,03",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1018,Tonerkassette Schwarz XXL 10.000 Seiten,4000100000666,"227,00","351,85",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1019,Premium Kopierpapier Palette 100.000 Blatt,4000100000703,"238,50","369,68",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1020,ThinkBook Enterprise 15 Zoll G4,4000100000740,"250,00","387,50",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1021,EliteDesk Mini PC Core i7 32GB,4000100000777,"261,50","405,33",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1022,UltraSharp 27 Zoll 4K USB-C Monitor,4000100000814,"273,00","423,15",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1023,Ergonomischer 34 Zoll Curved UWQHD,4000100000851,"284,50","440,98",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1024,Thunderbolt 4 Universal Dockingstation,4000100000888,"296,00","458,80",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1025,Managed Gigabit Switch 24-Port PoE+,4000100000925,"307,50","476,63",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1026,Enterprise Core Switch 48-Port 10GbE,4000100000962,"319,00","494,45",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1027,WiFi-6 Dual-Band Access Point Pro,4000100000999,"330,50","512,28",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1028,VPN-Sicherheits-Gateway Firewall Appliance,4000100001036,"342,00","530,10",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1029,19 Zoll Serverschrank 42HE schallgedämmt,4000100001073,"353,50","547,93",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1030,PowerServer Rack 1HE 64GB ECC Dual-Xeon,4000100001110,"365,00","565,75",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1031,4-Bay Business NAS Storage System,4000100001147,"376,50","583,58",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1032,Server-SSD 1.92TB NVMe Read-Intensive,4000100001184,"388,00","601,40",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1033,Windows Server 2022 Standard 16-Core,4000100001221,"399,50","619,23",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1034,Endpoint Security Suite 10 Clients 1Y,4000100001258,"411,00","637,05",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1035,VM-Backup & Replikation Jahreslizenz,4000100001295,"422,50","654,88",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1036,Ergonomischer Bürodrehstuhl Pro-Mesh,4000100001332,"434,00","672,70",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1037,Elektrisch höhenverstellbarer Schreibtisch 160cm,4000100001369,"445,50","690,53",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1038,Tonerkassette Schwarz XXL 10.000 Seiten,4000100001406,"457,00","708,35",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1039,Premium Kopierpapier Palette 100.000 Blatt,4000100001443,"468,50","726,18",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1040,ThinkBook Enterprise 15 Zoll G4,4000100001480,"480,00","744,00",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1041,EliteDesk Mini PC Core i7 32GB,4000100001517,"491,50","761,83",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1042,UltraSharp 27 Zoll 4K USB-C Monitor,4000100001554,"503,00","779,65",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1043,Ergonomischer 34 Zoll Curved UWQHD,4000100001591,"514,50","797,48",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1044,Thunderbolt 4 Universal Dockingstation,4000100001628,"526,00","815,30",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1045,Managed Gigabit Switch 24-Port PoE+,4000100001665,"537,50","833,13",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1046,Enterprise Core Switch 48-Port 10GbE,4000100001702,"549,00","850,95",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1047,WiFi-6 Dual-Band Access Point Pro,4000100001739,"560,50","868,78",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1048,VPN-Sicherheits-Gateway Firewall Appliance,4000100001776,"572,00","886,60",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1049,19 Zoll Serverschrank 42HE schallgedämmt,4000100001813,"583,50","904,43",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1050,PowerServer Rack 1HE 64GB ECC Dual-Xeon,4000100001850,"595,00","922,25",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1051,4-Bay Business NAS Storage System,4000100001887,"606,50","940,08",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1052,Server-SSD 1.92TB NVMe Read-Intensive,4000100001924,"618,00","957,90",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1053,Windows Server 2022 Standard 16-Core,4000100001961,"629,50","975,73",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1054,Endpoint Security Suite 10 Clients 1Y,4000100001998,"641,00","993,55",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1055,VM-Backup & Replikation Jahreslizenz,4000100002035,"652,50","1011,38",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1056,Ergonomischer Bürodrehstuhl Pro-Mesh,4000100002072,"664,00","1029,20",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1057,Elektrisch höhenverstellbarer Schreibtisch 160cm,4000100002109,"675,50","1047,03",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1058,Tonerkassette Schwarz XXL 10.000 Seiten,4000100002146,"687,00","1064,85",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1059,Premium Kopierpapier Palette 100.000 Blatt,4000100002183,"698,50","1082,68",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1060,ThinkBook Enterprise 15 Zoll G4,4000100002220,"710,00","1100,50",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1061,EliteDesk Mini PC Core i7 32GB (Edition Pro),4000100002257,"721,50","1118,33",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1062,UltraSharp 27 Zoll 4K USB-C Monitor (Edition Pro),4000100002294,"733,00","1136,15",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1063,Ergonomischer 34 Zoll Curved UWQHD (Edition Pro),4000100002331,"744,50","1153,98",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1064,Thunderbolt 4 Universal Dockingstation (Edition Pro),4000100002368,"756,00","1171,80",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1065,Managed Gigabit Switch 24-Port PoE+ (Edition Pro),4000100002405,"767,50","1189,63",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1066,Enterprise Core Switch 48-Port 10GbE (Edition Pro),4000100002442,"779,00","1207,45",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1067,WiFi-6 Dual-Band Access Point Pro (Edition Pro),4000100002479,"790,50","1225,28",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1068,VPN-Sicherheits-Gateway Firewall Appliance (Edition Pro),4000100002516,"802,00","1243,10",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1069,19 Zoll Serverschrank 42HE schallgedämmt (Edition Pro),4000100002553,"813,50","1260,93",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1070,PowerServer Rack 1HE 64GB ECC Dual-Xeon (Edition Pro),4000100002590,"25,00","38,75",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1071,4-Bay Business NAS Storage System (Edition Pro),4000100002627,"36,50","56,58",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1072,Server-SSD 1.92TB NVMe Read-Intensive (Edition Pro),4000100002664,"48,00","74,40",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1073,Windows Server 2022 Standard 16-Core (Edition Pro),4000100002701,"59,50","92,23",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1074,Endpoint Security Suite 10 Clients 1Y (Edition Pro),4000100002738,"71,00","110,05",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1075,VM-Backup & Replikation Jahreslizenz (Edition Pro),4000100002775,"82,50","127,88",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1076,Ergonomischer Bürodrehstuhl Pro-Mesh (Edition Pro),4000100002812,"94,00","145,70",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1077,Elektrisch höhenverstellbarer Schreibtisch 160cm (Edition Pro),4000100002849,"105,50","163,53",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1078,Tonerkassette Schwarz XXL 10.000 Seiten (Edition Pro),4000100002886,"117,00","181,35",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1079,Premium Kopierpapier Palette 100.000 Blatt (Edition Pro),4000100002923,"128,50","199,18",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1080,ThinkBook Enterprise 15 Zoll G4 (Edition Pro),4000100002960,"140,00","217,00",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1081,EliteDesk Mini PC Core i7 32GB (Edition Pro),4000100002997,"151,50","234,83",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1082,UltraSharp 27 Zoll 4K USB-C Monitor (Edition Pro),4000100003034,"163,00","252,65",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1083,Ergonomischer 34 Zoll Curved UWQHD (Edition Pro),4000100003071,"174,50","270,48",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1084,Thunderbolt 4 Universal Dockingstation (Edition Pro),4000100003108,"186,00","288,30",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1085,Managed Gigabit Switch 24-Port PoE+ (Edition Pro),4000100003145,"197,50","306,13",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1086,Enterprise Core Switch 48-Port 10GbE (Edition Pro),4000100003182,"209,00","323,95",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1087,WiFi-6 Dual-Band Access Point Pro (Edition Pro),4000100003219,"220,50","341,78",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1088,VPN-Sicherheits-Gateway Firewall Appliance (Edition Pro),4000100003256,"232,00","359,60",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1089,19 Zoll Serverschrank 42HE schallgedämmt (Edition Pro),4000100003293,"243,50","377,43",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1090,PowerServer Rack 1HE 64GB ECC Dual-Xeon (Edition Pro),4000100003330,"255,00","395,25",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1091,4-Bay Business NAS Storage System (Edition Pro),4000100003367,"266,50","413,08",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1092,Server-SSD 1.92TB NVMe Read-Intensive (Edition Pro),4000100003404,"278,00","430,90",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1093,Windows Server 2022 Standard 16-Core (Edition Pro),4000100003441,"289,50","448,73",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1094,Endpoint Security Suite 10 Clients 1Y (Edition Pro),4000100003478,"301,00","466,55",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1095,VM-Backup & Replikation Jahreslizenz (Edition Pro),4000100003515,"312,50","484,38",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1096,Ergonomischer Bürodrehstuhl Pro-Mesh (Edition Pro),4000100003552,"324,00","502,20",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1097,Elektrisch höhenverstellbarer Schreibtisch 160cm (Edition Pro),4000100003589,"335,50","520,03",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1098,Tonerkassette Schwarz XXL 10.000 Seiten (Edition Pro),4000100003626,"347,00","537,85",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1099,Premium Kopierpapier Palette 100.000 Blatt (Edition Pro),4000100003663,"358,50","555,68",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1100,ThinkBook Enterprise 15 Zoll G4 (Edition Pro),4000100003700,"370,00","573,50",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1101,EliteDesk Mini PC Core i7 32GB (Edition Pro),4000100003737,"381,50","591,33",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1102,UltraSharp 27 Zoll 4K USB-C Monitor (Edition Pro),4000100003774,"393,00","609,15",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1103,Ergonomischer 34 Zoll Curved UWQHD (Edition Pro),4000100003811,"404,50","626,98",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1104,Thunderbolt 4 Universal Dockingstation (Edition Pro),4000100003848,"416,00","644,80",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1105,Managed Gigabit Switch 24-Port PoE+ (Edition Pro),4000100003885,"427,50","662,63",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1106,Enterprise Core Switch 48-Port 10GbE (Edition Pro),4000100003922,"439,00","680,45",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1107,WiFi-6 Dual-Band Access Point Pro (Edition Pro),4000100003959,"450,50","698,28",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1108,VPN-Sicherheits-Gateway Firewall Appliance (Edition Pro),4000100003996,"462,00","716,10",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
+1109,19 Zoll Serverschrank 42HE schallgedämmt (Edition Pro),4000100004033,"473,50","733,93",True,IT-Hardware & Peripherie,Hardware,Lenovo Group,China,Gold Partner
+1110,PowerServer Rack 1HE 64GB ECC Dual-Xeon (Edition Pro),4000100004070,"485,00","751,75",True,Netzwerk & Infrastruktur,Infrastruktur,VMware by Broadcom,USA,Certified Partner
+1111,4-Bay Business NAS Storage System (Edition Pro),4000100004107,"496,50","769,58",True,Server & Cloud Storage,Enterprise Systems,Schneider Electric APC,Frankreich,Gold Partner
+1112,Server-SSD 1.92TB NVMe Read-Intensive (Edition Pro),4000100004144,"508,00","787,40",True,Software & Lizenzen,Digital & Cloud,Dell Technologies,USA,Platinum Partner
+1113,Windows Server 2022 Standard 16-Core (Edition Pro),4000100004181,"519,50","805,23",True,Büro-Ergonomie & Mobiliar,Office Equipment,Lenovo Group,China,Gold Partner
+1114,Endpoint Security Suite 10 Clients 1Y (Edition Pro),4000100004218,"531,00","823,05",True,Verbrauchsmaterial & Zubehör,Supplies,VMware by Broadcom,USA,Certified Partner
+1115,VM-Backup & Replikation Jahreslizenz (Edition Pro),4000100004255,"542,50","840,88",True,IT-Hardware & Peripherie,Hardware,Schneider Electric APC,Frankreich,Gold Partner
+1116,Ergonomischer Bürodrehstuhl Pro-Mesh (Edition Pro),4000100004292,"554,00","858,70",True,Netzwerk & Infrastruktur,Infrastruktur,Dell Technologies,USA,Platinum Partner
+1117,Elektrisch höhenverstellbarer Schreibtisch 160cm (Edition Pro),4000100004329,"565,50","876,53",True,Server & Cloud Storage,Enterprise Systems,Lenovo Group,China,Gold Partner
+1118,Tonerkassette Schwarz XXL 10.000 Seiten (Edition Pro),4000100004366,"577,00","894,35",True,Software & Lizenzen,Digital & Cloud,VMware by Broadcom,USA,Certified Partner
+1119,Premium Kopierpapier Palette 100.000 Blatt (Edition Pro),4000100004403,"588,50","912,18",True,Büro-Ergonomie & Mobiliar,Office Equipment,Schneider Electric APC,Frankreich,Gold Partner
+1120,ThinkBook Enterprise 15 Zoll G4 (Edition Pro),4000100004440,"600,00","930,00",True,Verbrauchsmaterial & Zubehör,Supplies,Dell Technologies,USA,Platinum Partner
