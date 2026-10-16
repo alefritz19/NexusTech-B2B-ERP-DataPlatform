@@ -70,7 +70,7 @@ Datenbestand 01/2023 – 12/2025 · 40.000 Aufträge · 120.000 Positionen:
 
 * **Umsetzung:** Keine Zeilen gelöscht. Flag `IstUmsatzrelevant` (1/0) in der Faktentabelle, alle Umsatz-Measures filtern darauf. Retourenanalysen bleiben möglich.
 
-![Finanzieller Effekt des Flags](04_Report_Design_and_Screenshots/07_sql_flag_umsatzeffekt.png)
+![Finanzieller Effekt des Flags](04_Report_Design_and_Screenshots/06_sql_flag_umsatzeffekt.png)
 
 ### 2. Leicht rückläufige Umsatzentwicklung
 * **Befund:** Der realisierte Umsatz sinkt von **122,88 Mio. €** (2023) auf **121,59 Mio. €** (2024, −1,1 %) und **119,34 Mio. €** (2025, −1,8 %). Treiber ist die Auftragsanzahl (13.504 ➔ 13.392 ➔ 13.104), der Bestellwert bleibt stabil bei ca. 9.100 €.
@@ -177,9 +177,7 @@ erDiagram
 
 Alle Measures wurden vor dem Dashboard-Bau gegen die SQL-Ergebnisse geprüft. Abweichung: **0,00 €**.
 
-![DAX Studio Jahresübersicht](04_Report_Design_and_Screenshots/03_dax_studio_validation.png)
-
-![DAX Studio Kategorien](04_Report_Design_and_Screenshots/05_dax_studio_kategorien.png)
+![DAX Studio Validierung der Kennzahlen](04_Report_Design_and_Screenshots/03_dax_studio_validation.png)
 
 | Kontrolle | SQL Server | DAX Studio |
 | :--- | ---: | ---: |
@@ -248,12 +246,11 @@ NexusTech-B2B-ERP-DataPlatform/
 └── 04_Report_Design_and_Screenshots/
     ├── 01_dashboard_dark_theme.png           # Executive Dashboard
     ├── 02_powerbi_star_schema.png            # Modellansicht Sternschema
-    ├── 03_dax_studio_validation.png          # DAX Studio: Jahresübersicht
+    ├── 03_dax_studio_validation.png          # DAX Studio: Kennzahlen-Validierung
     ├── 04_sql_server_oltp_erd.png            # ERD des ERP-Quellsystems
-    ├── 05_dax_studio_kategorien.png          # DAX Studio: Kategorien
-    ├── 06_sql_status_analyse.png             # SQL: Lieferstatus-Analyse
-    ├── 07_sql_flag_umsatzeffekt.png          # SQL: 26,46 Mio. € Effekt des Flags
-    └── 08_csv_export_powershell.png          # CSV-Export in der Konsole
+    ├── 05_sql_status_analyse.png             # SQL: Lieferstatus-Analyse
+    ├── 06_sql_flag_umsatzeffekt.png          # SQL: 26,46 Mio. € Effekt des Flags
+    └── 07_csv_export_powershell.png          # CSV-Export in der Konsole
 ```
 
 ---
