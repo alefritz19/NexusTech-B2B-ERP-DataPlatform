@@ -1,6 +1,6 @@
 -- ==============================================================================
 -- 01_DWH_TRANSFORMATION / 02_Sandbox_mit_Temp_Tabellen.sql
--- Schritt 3-7: Fakt + Dimensionen in temporären #Tabellen entwickeln und prüfen
+-- Schritt 3-7: Faktentabelle + Dimensionen in temporären #Tabellen entwickeln und prüfen
 -- ==============================================================================
 -- #Tabelle = lebt nur in DIESEM Abfragefenster (tempdb).
 -- Fenster schließen -> Tabelle weg. Ideal zum Experimentieren.
@@ -10,7 +10,7 @@ USE NexusTech_ERP;
 GO
 
 -- ==============================================================================
--- SCHRITT 3: FAKTENTABELLE (Grain = 1 verkaufte Auftragsposition)
+-- SCHRITT 3: FAKTENTABELLE (Granularität = 1 verkaufte Auftragsposition)
 -- ==============================================================================
 DROP TABLE IF EXISTS #temp_fct_bestellungen;
 
@@ -62,7 +62,7 @@ SELECT TOP 10
 FROM #temp_fct_bestellungen;
 
 -- ==============================================================================
--- SCHRITT 4: RECONCILIATION (Abgleich vorher / nachher)
+-- SCHRITT 4: DATENABGLEICH (vorher / nachher)
 -- Erwartet: 120.000 = 120.000 | ohne_Lieferung = 2.400 (= stornierte Positionen)
 -- ==============================================================================
 SELECT
@@ -110,7 +110,7 @@ SELECT
 FROM #temp_fct_bestellungen;
 
 -- ==============================================================================
--- SCHRITT 6: DIMENSIONEN (Snowflake -> Star: denormalisieren)
+-- SCHRITT 6: DIMENSIONEN (Snowflake-Schema -> Sternschema: denormalisieren)
 -- ==============================================================================
 DROP TABLE IF EXISTS #temp_dim_produkte;
 

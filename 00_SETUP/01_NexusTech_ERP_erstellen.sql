@@ -28,7 +28,7 @@ CREATE SCHEMA dwh;   -- Zukünftige analytische Sicht (Sternschema Views)
 GO
 
 -- ------------------------------------------------------------------------------
--- 1. HILFSTABELLE: Tally Table (Zahlen von 1 bis 150.000)
+-- 1. HILFSTABELLE: Zahlentabelle (Tally Table, Zahlen von 1 bis 150.000)
 -- ------------------------------------------------------------------------------
 CREATE TABLE util.Zahlen (N INT NOT NULL PRIMARY KEY);
 GO
@@ -335,7 +335,7 @@ FROM dbo.Bestellungen b;
 GO
 
 -- ------------------------------------------------------------------------------
--- 5. STAGING BEREICH: stg.CRM_LeadImport (Unbereinigte Daten für ETL-Übungen)
+-- 5. STAGING-BEREICH: stg.CRM_LeadImport (Unbereinigte Daten für ETL-Übungen)
 -- ------------------------------------------------------------------------------
 CREATE TABLE stg.CRM_LeadImport (
     ImportRowID INT IDENTITY(1,1) PRIMARY KEY,

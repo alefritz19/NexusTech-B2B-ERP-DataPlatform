@@ -1,5 +1,5 @@
 # ==============================================================================
-# EXPORT DWH VIEWS TO CSV
+# EXPORT DER DWH-VIEWS ALS CSV-DATEIEN
 # Datenbank: NexusTech_ERP (.\SQLEXPRESS)
 # ==============================================================================
 

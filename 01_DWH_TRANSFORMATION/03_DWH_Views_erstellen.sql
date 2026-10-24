@@ -13,7 +13,7 @@ IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'dwh')
 GO
 
 -- ------------------------------------------------------------------------------
--- 2. FAKT: dwh.vw_fct_bestellungen  (120.000 Zeilen)
+-- 2. FAKTENTABELLE: dwh.vw_fct_bestellungen  (120.000 Zeilen)
 -- ------------------------------------------------------------------------------
 CREATE OR ALTER VIEW dwh.vw_fct_bestellungen AS
 SELECT

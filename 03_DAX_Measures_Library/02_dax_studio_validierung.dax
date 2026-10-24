@@ -1,7 +1,7 @@
 // ==============================================================================
 // 03_DAX_Measures_Library / 02_dax_studio_validierung.dax
 // Abfragen für DAX Studio (Externe Tools -> DAX Studio, F5 = Run)
-// Ziel: Ergebnisse 1:1 gegen SQL Server abgleichen (Reconciliation)
+// Ziel: Ergebnisse 1:1 gegen SQL Server abgleichen (Datenabgleich)
 // ==============================================================================
 
 // ------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ ROW(
 )
 
 // ------------------------------------------------------------------------------
-// Abfrage 2: Umsatz & Marge je Kategorie (Spalte aus Dimension, Summe aus Fakt)
+// Abfrage 2: Umsatz & Marge je Kategorie (Spalte aus Dimension, Summe aus Faktentabelle)
 // ------------------------------------------------------------------------------
 EVALUATE
 SUMMARIZECOLUMNS(

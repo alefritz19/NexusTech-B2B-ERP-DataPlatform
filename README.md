@@ -1,5 +1,5 @@
-# 🏢 NexusTech B2B Solutions GmbH — ERP-to-Dashboard Data Pipeline
-### End-to-End Data Engineering & BI Projekt (SQL Server ➔ DWH ➔ CSV ➔ Power BI ➔ DAX Studio)
+# 🏢 NexusTech B2B Solutions GmbH — Datenpipeline vom ERP bis zum Dashboard
+### End-to-End-Projekt für Data Engineering & BI (SQL Server ➔ DWH ➔ CSV ➔ Power BI ➔ DAX Studio)
 ### Datengrundlage: `NexusTech_ERP` · DACH-Region · 2.500 B2B-Kunden · 120 Artikel · 120.000 Positionen
 
 [![SQL Server](https://img.shields.io/badge/SQL_Server-2022_T--SQL-CC292B?logo=microsoftsqlserver)](https://www.microsoft.com/sql-server)
@@ -7,7 +7,7 @@
 [![DAX](https://img.shields.io/badge/DAX-Measures-0078D4)](https://learn.microsoft.com/dax/)
 [![DAX Studio](https://img.shields.io/badge/DAX_Studio-3.6_Validierung-5C2D91)](https://daxstudio.org/)
 [![Kimball](https://img.shields.io/badge/Modell-Kimball_Sternschema-success)](#)
-[![Fabric](https://img.shields.io/badge/Microsoft_Fabric-Roadmap-00A4EF?logo=microsoft)](#)
+[![Fabric](https://img.shields.io/badge/Microsoft_Fabric-Ausblick-00A4EF?logo=microsoft)](#)
 
 ---
 
@@ -18,7 +18,7 @@
 Im Unterschied zu einem fertigen Lehrdatensatz startet dieses Projekt bei **rohen, normalisierten ERP-Tabellen (3NF)**. Jeder Schritt bis zum Dashboard wurde manuell in T-SQL aufgebaut und geprüft:
 
 1. **Datenexploration:** ERD lesen, Beleg-Kopf (`Bestellungen`) und Positionen (`Bestellpositionen`) verstehen (1:N).
-2. **Sandbox mit `#Temp`-Tabellen:** Faktentabelle zusammenführen, Kennzahlen berechnen, nach jedem JOIN Zeilen abgleichen (Reconciliation).
+2. **Sandbox mit `#Temp`-Tabellen:** Faktentabelle zusammenführen, Kennzahlen berechnen, nach jedem JOIN Zeilenzahlen abgleichen (Datenabgleich).
 3. **Statusfalle erkannt:** Stornos, Retouren und offene Lieferungen über ein Flag `IstUmsatzrelevant` getrennt statt gelöscht (**26,46 Mio. €** Unterschied).
 4. **DWH-Schicht:** 4 Views + Kalendertabelle im Schema `dwh`.
 5. **CSV-Export:** Automatisiert per PowerShell / .NET (UTF-8).
@@ -26,12 +26,12 @@ Im Unterschied zu einem fertigen Lehrdatensatz startet dieses Projekt bei **rohe
 
 ---
 
-## 🖥️ Dashboard-Vorschau & Semantisches Datenmodell
+## 🖥️ Dashboard-Vorschau & semantisches Datenmodell
 
-### 1. Executive Dashboard (Power BI Desktop)
-![NexusTech Executive Dashboard](04_Report_Design_and_Screenshots/01_dashboard_dark_theme.png)
+### 1. Management-Dashboard (Power BI Desktop)
+![NexusTech Management-Dashboard](04_Report_Design_and_Screenshots/01_dashboard_dark_theme.png)
 
-### 2. Sternschema in Power BI (1 Fakt, 4 Dimensionen, 1:n)
+### 2. Sternschema in Power BI (1 Faktentabelle, 4 Dimensionen, 1:n)
 ![NexusTech Sternschema](04_Report_Design_and_Screenshots/02_powerbi_star_schema.png)
 
 ### 3. Ausgangslage: ERP-Quellsystem in 3. Normalform (SQL Server ERD)
@@ -39,7 +39,7 @@ Im Unterschied zu einem fertigen Lehrdatensatz startet dieses Projekt bei **rohe
 
 ---
 
-## 💡 Zentrale Business Insights
+## 💡 Zentrale Geschäftserkenntnisse
 
 Datenbestand 01/2023 – 12/2025 · 40.000 Aufträge · 120.000 Positionen:
 
@@ -95,7 +95,7 @@ flowchart LR
     end
     subgraph S2["2 · Sandbox (#Temp)"]
         T1["JOIN + Kennzahlen"]
-        T2["Reconciliation"]
+        T2["Datenabgleich"]
         T3["Flag IstUmsatzrelevant"]
     end
     subgraph S3["3 · DWH (dwh)"]
@@ -228,11 +228,11 @@ NexusTech-B2B-ERP-DataPlatform/
 │
 ├── 01_DWH_TRANSFORMATION/
 │   ├── 01_Datenexploration.sql               # SELECT TOP, DISTINCT, erste JOINs, CAST-Übung
-│   ├── 02_Sandbox_mit_Temp_Tabellen.sql      # #Temp-Fakt, Reconciliation, Flag, Dimensionen, Kalender
+│   ├── 02_Sandbox_mit_Temp_Tabellen.sql      # #Temp-Faktentabelle, Datenabgleich, Flag, Dimensionen, Kalender
 │   └── 03_DWH_Views_erstellen.sql            # Finale Views im Schema dwh + dim_datum
 │
 ├── 02_CSV_EXPORTS/
-│   ├── export_views_to_csv.ps1               # .NET/PowerShell Export (UTF-8, Header, Quoting)
+│   ├── export_views_to_csv.ps1               # .NET/PowerShell-Export (UTF-8, Kopfzeile, Anführungszeichen)
 │   ├── fct_bestellungen.csv                  # 120.000 Zeilen
 │   ├── dim_produkte.csv                      # 120 Zeilen
 │   ├── dim_kunden.csv                        # 2.500 Zeilen
@@ -244,7 +244,7 @@ NexusTech-B2B-ERP-DataPlatform/
 │   └── 02_dax_studio_validierung.dax         # EVALUATE-Abfragen mit Sollwerten
 │
 └── 04_Report_Design_and_Screenshots/
-    ├── 01_dashboard_dark_theme.png           # Executive Dashboard
+    ├── 01_dashboard_dark_theme.png           # Management-Dashboard
     ├── 02_powerbi_star_schema.png            # Modellansicht Sternschema
     ├── 03_dax_studio_validation.png          # DAX Studio: Kennzahlen-Validierung
     ├── 04_sql_server_oltp_erd.png            # ERD des ERP-Quellsystems
@@ -269,11 +269,11 @@ NexusTech-B2B-ERP-DataPlatform/
 
 ---
 
-## 🚀 Nächster Schritt: Microsoft Fabric
+## 🚀 Ausblick: Microsoft Fabric
 
 1. **Bronze:** CSV-Dateien in ein Lakehouse (OneLake) hochladen.
 2. **Silver:** Typisierung, Bereinigung und Flag-Logik in PySpark-Notebooks.
-3. **Gold:** Delta-Tabellen im Sternschema + Semantic Model im Direct-Lake-Modus.
+3. **Gold:** Delta-Tabellen im Sternschema + semantisches Modell im Direct-Lake-Modus.
 
 ---
 
